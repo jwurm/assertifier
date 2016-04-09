@@ -1,4 +1,4 @@
-package com.prodyna.academy.assertifier;
+package de.jenswurm.assertifier;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;

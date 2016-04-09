@@ -1,6 +1,5 @@
-package com.prodyna.academy.assertifier.testbeans;
+package de.jenswurm.assertifier.testbeans;
 
-import java.math.BigDecimal;
 import java.util.Date;
 
 public class Purchase {

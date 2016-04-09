@@ -1,4 +1,4 @@
-package com.prodyna.academy.assertifier;
+package de.jenswurm.assertifier;
 
 import java.text.SimpleDateFormat;
 
@@ -6,10 +6,9 @@ import org.joda.time.LocalDateTime;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.prodyna.academy.assertifier.JSONAssertifier;
-import com.prodyna.academy.assertifier.testbeans.Customer;
-import com.prodyna.academy.assertifier.testbeans.Product;
-import com.prodyna.academy.assertifier.testbeans.Purchase;
+import de.jenswurm.assertifier.testbeans.Customer;
+import de.jenswurm.assertifier.testbeans.Product;
+import de.jenswurm.assertifier.testbeans.Purchase;
 
 public class JSONAssertifierTest {
 

@@ -1,4 +1,4 @@
-package com.prodyna.academy.assertifier.testbeans;
+package de.jenswurm.assertifier.testbeans;
 
 import java.util.ArrayList;
 import java.util.List;
