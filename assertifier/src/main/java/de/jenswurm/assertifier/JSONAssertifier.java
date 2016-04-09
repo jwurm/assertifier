@@ -21,7 +21,6 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
-import com.google.common.base.Throwables;
 
 public class JSONAssertifier {
 
@@ -164,9 +163,8 @@ public class JSONAssertifier {
 		try {
 			return om.writeValueAsString(object);
 		} catch (JsonProcessingException e) {
-			Throwables.propagate(e);
+			throw new RuntimeException(e.getMessage(), e);
 		}
-		return null;// can never happen
 	}
 
 	class CustomLocalDateSerializer extends StdSerializer<LocalDate> {
