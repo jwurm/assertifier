@@ -1,7 +1,5 @@
 package de.jenswurm.assertifier.testbeans;
 
-import java.math.BigDecimal;
-
 public class Product {
 
 	private int id;
