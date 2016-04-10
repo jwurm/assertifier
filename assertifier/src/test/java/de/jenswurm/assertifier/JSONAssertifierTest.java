@@ -16,6 +16,7 @@ public class JSONAssertifierTest {
 	public void test() {
 		// build a more or less complex object structure to perform asserts on
 		Customer customer = buildTestData();
+		
 
 		/*
 		 * The generated asserts are complete, any changes to the values in the
@@ -41,11 +42,14 @@ public class JSONAssertifierTest {
 		 * not be any circular references in the object graph.
 		 */
 
+		
 		// generate asserts - these are outputted at the console and can be
-		// copied and pasted into the test class
+		// copied and pasted into the test class. The first parameter is the
+		// object to generate asserts for, the second parameter is the name of
+		// the variable that holds the object as a string.
 		new JSONAssertifier().assertify(customer, "customer");
 
-		// so here are the generated asserts...the statements 
+		// so here are the generated asserts...
 		String[] customerJSON = new JSONAssertifier().marshalAsJSON(customer);
 		int customerIndex = 0;
 		Assert.assertEquals("{", customerJSON[customerIndex++]);
@@ -72,11 +76,10 @@ public class JSONAssertifierTest {
 		Assert.assertEquals("  } ]", customerJSON[customerIndex++]);
 		Assert.assertEquals("  surname : Doe", customerJSON[customerIndex++]);
 		Assert.assertEquals("}", customerJSON[customerIndex++]);
-
 		/*
-		 * This is what the alternative of classic asserts would look like.
-		 * It's a lot of work to type and not really easy to read and maintain
-		 * once we go down into purchases and products. Also it's easy to forget
+		 * This is what the alternative of classic asserts would look like. It's
+		 * a lot of work to type and not really easy to read and maintain once
+		 * we go down into purchases and products. Also it's easy to forget
 		 * attributes and new attributes that are added to the beans don't
 		 * automatically get noticed to be missing in the tests.
 		 * 

@@ -44,6 +44,21 @@ public class JSONAssertifier {
 		om.setSerializationInclusion(Include.NON_EMPTY);
 	}
 
+	/**
+	 * Generates assert statements for an object that can be copied and pasted
+	 * into a unit test.
+	 * 
+	 * It's called with the object in both parameters, once the object itself
+	 * and then the name of the object's variable as a string. 
+	 * 
+	 * Example:
+	 * assertify(myobject, "myobject");
+	 * 
+	 * @param object
+	 *            The object to generate asserts for
+	 * @param name
+	 *            The name of the variable that holds the object.
+	 */
 	public void assertify(Object object, String name) {
 
 		System.out.println();
